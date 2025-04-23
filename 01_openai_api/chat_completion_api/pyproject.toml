@@ -1,0 +1,20 @@
+[project]
+name = "chat-completion-api"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Sohail Ahmed", email = "sohahmed.c@stc.com.sa" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "openai>=1.75.0",
+    "python-dotenv>=1.1.0",
+]
+
+[project.scripts]
+chat-completion-api = "chat_completion_api:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
