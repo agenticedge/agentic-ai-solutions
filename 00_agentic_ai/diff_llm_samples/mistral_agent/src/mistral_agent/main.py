@@ -11,18 +11,24 @@ def run_agent() -> None:
     MISTRAL_API_KEY = os.environ.get("MISTRAL_API_KEY")
     MISTRAL_BASE_URL = os.environ.get("MISTRAL_BASE_URL", "https://api.mistral.ai/v1")
 
+    # DeepSeeker API key and base URL
+    DEEPSEEKER_API_KEY = 'ollama'
+    DEEPSEEKER_BASE_URL = 'http://localhost:11434/v1'
+
     # Check if the API key is present; if not, raise an error
     if not MISTRAL_API_KEY:
         raise ValueError("MISTRAL_API_KEY is not set. Please ensure it is defined in your .env file.")
 
-    #Reference: https://ai.google.dev/gemini-api/docs/openai
     external_client = AsyncOpenAI(
-        api_key=MISTRAL_API_KEY,
-        base_url=MISTRAL_BASE_URL,
+        #api_key=MISTRAL_API_KEY,
+        #base_url=MISTRAL_BASE_URL,
+        api_key=DEEPSEEKER_API_KEY,
+        base_url=DEEPSEEKER_BASE_URL,
     )
 
     model = OpenAIChatCompletionsModel(
-        model="mistral-large-latest",
+        #model="mistral-large-latest",
+        model="deepseek-r1:1.5b",
         openai_client=external_client
     )
 
