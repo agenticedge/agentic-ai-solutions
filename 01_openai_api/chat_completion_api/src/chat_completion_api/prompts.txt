@@ -1,0 +1,3 @@
+Prompt for File Search Tool
+
+I have almost 3000 xslt files of code written for ibm data power API's, now i want to write a tool for open ai agent sdk, where user can query any question about the code written in these xslt files, for example user can ask about specific function in how many files this function exists, or give me the code of this function, or give me the reference files names of the specific function any many other endless possible prompt related to the code, please write the code for such tool, giving very high search performance, this code should be writtn in a way that i can be able to copy in a file and import in agent file and use it.
