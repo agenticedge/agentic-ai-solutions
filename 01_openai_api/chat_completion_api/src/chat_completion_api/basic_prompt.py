@@ -26,6 +26,7 @@ response = openai.chat.completions.create(
     messages= prompts
 )
 
+
 print(f'Response.choices[0]: {response.choices[0]}')
 print()
 print(f'Response.choices[0].message: {response.choices[0].finish_reason}')
